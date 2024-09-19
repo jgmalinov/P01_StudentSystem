@@ -1,10 +1,13 @@
-﻿namespace P01_StudentSystem
+﻿using P01_StudentSystem.Data;
+using P01_StudentSystem.Data.Models;
+
+namespace P01_StudentSystem
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
         }
     }
 }

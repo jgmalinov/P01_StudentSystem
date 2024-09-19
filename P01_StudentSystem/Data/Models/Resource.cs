@@ -18,7 +18,7 @@ namespace P01_StudentSystem.Data.Models
         public string Name { get; set; }
         [Column(TypeName = "VARCHAR(100)")]
         [Required]
-        public string Url {  get; set; }
+        public string Url { get; set; } = null!;
         public enum ResourceType
         {
             Video,
@@ -30,6 +30,6 @@ namespace P01_StudentSystem.Data.Models
         [ForeignKey(nameof(Course))]
         public int CourseId {  get; set; }
         //[ForeignKey(nameof(CourseId)]
-        public Course Course { get; set; }
+        public virtual Course Course { get; set; }
     }
 }

@@ -13,19 +13,19 @@ namespace P01_StudentSystem.Data.Models
             Homeworks = new HashSet<Homework>();
         }
         [Key]
-        public int StudentID { get; set; }
-        
+        public int StudentId { get; set; }
+
         [Column(TypeName = "varchar(100)")]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         [Column(TypeName = "varchar(10)"), StringLength(10)]
-        public string PhoneNumber {  get; set; }
+        public string? PhoneNumber { get; set; }
         public DateTime RegisteredOn { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
 
         // Navigation properties
-        public ICollection<StudentCourse> StudentsCourses { get; set; }
-        public ICollection<Homework> Homeworks { get; set; }
+        public virtual ICollection<StudentCourse> StudentsCourses { get; set; }
+        public virtual ICollection<Homework> Homeworks { get; set; }
     }
 }
     
